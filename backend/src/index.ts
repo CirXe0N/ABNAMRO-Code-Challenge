@@ -18,7 +18,7 @@ app.use(cors());
 app.use(expressWinston.logger(winstonOptions));
 app.use(expressWinston.errorLogger(winstonOptions));
 
-app.use('api/v1/nodes', new NodesRoutes().configure());
+app.use('/api/v1/nodes', new NodesRoutes().configure());
 
 app.listen(port, () => {
     console.info(`⚡️[server]: Server is running at http://127.0.0.1:${port}`);
