@@ -27,7 +27,7 @@ The assignment description can be found [here](#assignment-description).
 - [Neo4J 4.1.5](https://neo4j.com/download-center)
 
 ### Backend
-#### Installation
+#### Backend: Installation
 1. Make sure `Node.JS` and `NPM` are installed on the system.
 1. Make sure `Neo4J` database is set up and running properly.
 1. Open the terminal and change to the folder `backend` of the project.
@@ -51,14 +51,22 @@ The assignment description can be found [here](#assignment-description).
     $ npm run migrate
     ```
 
-#### Usage
+#### Backend: Usage
+1. Follow the instructions of the [installation paragraph](#backend-installation) first.
 1. Run the following command in the folder `backend` to start the project:
     ```commandline
     $ npm run start
     ```
 
+#### Backend: Run Tests
+1. Follow the instructions of the [installation paragraph](#backend-installation) first.
+1. Run the following command in the folder `backend` to start the project:
+    ```commandline
+    $ npm run test
+    ```
+
 ### Frontend
-#### Installation
+#### Frontend: Installation
 1. Make sure `Node.JS` and `NPM` are installed on the system.
 1. Make sure the `backend` application is running properly.
 1. Open the terminal and change to the folder `frontend` of the project.
@@ -71,16 +79,21 @@ The assignment description can be found [here](#assignment-description).
     ```commandline
     $ npm install
     ```
-1. Run the following command in the folder `frontend` to build the project:
-    ```commandline
-    $ npm build
-    ```
-#### Usage
+
+#### Frontend: Usage
+1. Follow the instructions of the [installation paragraph](#frontend-installation) first.
 1. Run the following command in the folder `frontend` to start the project:
     ```commandline
-    $ npm run start
+    $ npm run serve
     ```
-   
+
+#### Frontend: Run Tests
+1. Follow the instructions of the [installation paragraph](#frontend-installation) first.
+1. Run the following command in the folder `frontend` to start the project:
+    ```commandline
+    $ npm run test
+    ```   
+
 ### Assignment Description
 
 #### User Story
