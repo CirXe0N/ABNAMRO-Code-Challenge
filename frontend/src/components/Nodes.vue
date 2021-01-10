@@ -5,7 +5,7 @@
       <div>Click and drag to <span>pan</span> canvas.</div>
     </div>
 
-    <ModalComponent ref="modal" :node="selectedNode"/>
+    <ModalComponent ref="modal" :node="selectedNode" @closed="onModalClose()"/>
   </div>
 </template>
 
@@ -42,6 +42,14 @@ export default class NodesComponent extends Vue {
   private selectNode(node: Node): void {
     this.selectedNode = node;
     (this.$refs.modal as ModalComponent).open();
+  }
+
+  /**
+   * Remove the active class from nodes.
+   */
+  private onModalClose(): void {
+    this.selectedNode = {};
+    d3.selectAll('g.node').classed('active', false);
   }
 
   /**
@@ -91,8 +99,14 @@ export default class NodesComponent extends Vue {
         .html((d: any) => d.data.name);
 
       // Add click event to each rectangle.
-      rect.on('click', (d: any, i: any) => this.selectNode(i.data));
-      text.on('click', (d: any, i: any) => this.selectNode(i.data));
+      rect.on('click', (d: any, i: any) => {
+        d.target.parentElement.classList.add('active');
+        this.selectNode(i.data);
+      });
+      text.on('click', (d: any, i: any) => {
+        d.target.parentElement.classList.add('active');
+        this.selectNode(i.data);
+      });
     });
   }
 }
@@ -142,6 +156,10 @@ g.node {
   &:hover {
     cursor: pointer;
     fill: #005e5d;
+  }
+
+  &.active {
+    fill: #efc51e;
   }
 
   rect {

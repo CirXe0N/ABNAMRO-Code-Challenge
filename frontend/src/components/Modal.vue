@@ -38,6 +38,7 @@ export default class ModalComponent extends Vue {
    */
   private close(): void {
     this.isOpen = false;
+    this.$emit('closed', true);
   }
 }
 </script>
@@ -70,6 +71,18 @@ export default class ModalComponent extends Vue {
 .dialog-inner {
   opacity: 0;
   background: #fff;
+
+  button {
+    background-color: #00857a;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 10px 30px;
+
+    &:hover {
+      background-color: #005e5d;
+    }
+  }
 }
 
 .dialog__content {
