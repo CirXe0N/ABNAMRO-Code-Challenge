@@ -48,7 +48,7 @@ The assignment description can be found [here](#assignment-description).
     ```
 1. Run the following command in the folder `backend` to migrate the initial data to Neo4J database:
     ```commandline
-    $ npm run migrate
+    $ npm run migrations
     ```
 
 #### Backend: Usage
