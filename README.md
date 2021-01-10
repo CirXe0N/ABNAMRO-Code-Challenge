@@ -26,7 +26,7 @@ The assignment description can be found [here](#assignment-description).
 - [NPM 6.14+](https://www.npmjs.com/get-npm)
 - [Neo4J 4.1.5](https://neo4j.com/download-center)
 
-### Backend
+### Backend: Express.JS Server
 #### Backend: Installation
 1. Make sure `Node.JS` and `NPM` are installed on the system.
 1. Make sure `Neo4J` database is set up and running properly.
@@ -65,7 +65,7 @@ The assignment description can be found [here](#assignment-description).
     $ npm run test
     ```
 
-### Frontend
+### Frontend: Vue.JS Client App
 #### Frontend: Installation
 1. Make sure `Node.JS` and `NPM` are installed on the system.
 1. Make sure the `backend` application is running properly.
