@@ -25,9 +25,9 @@ export default class NodesComponent extends Vue {
 
   private height = 460;
 
-  private selectedNode: Node = {};
+  private selectedNode: object = {};
 
-  private host: string = process.env.VUE_APP_BACKEND_HOST;
+  private host: string | undefined = process.env.VUE_APP_BACKEND_HOST;
 
   public created(): void {
     this.$nextTick(() => {
@@ -41,18 +41,19 @@ export default class NodesComponent extends Vue {
    */
   private selectNode(node: Node): void {
     this.selectedNode = node;
-    this.$refs.modal.open();
+    (this.$refs.modal as ModalComponent).open();
   }
 
   /**
    * Generate a D3.js Tree Graph.
    */
   private generateGraph(): void {
-    const svg = d3
+    const svg: any = d3
       .select('#nodes-graph')
       .append('svg')
-      .attr('class', 'canvas')
-      .call(d3.zoom().on('zoom', (ev: any) => svg.attr('transform', ev.transform)))
+      .attr('class', 'canvas') // @ts-ignore
+      .call(d3.zoom().on('zoom', (ev) => svg.attr('transform', ev.transform)))
+      .on('dblclick.zoom', null)
       .append('g');
 
     d3.json(`${this.host}/api/v1/nodes`).then((data: any) => {

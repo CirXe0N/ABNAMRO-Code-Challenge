@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal.vue renders props.node when passed 1`] = `
+<div
+  class="dialog"
+>
+  <div
+    class="dialog__overlay"
+  />
+   
+  <div
+    class="dialog__content"
+  >
+    <div
+      class="morph-shape"
+    >
+      <svg
+        height="100%"
+        preserveAspectRatio="none"
+        viewBox="0 0 560 280"
+        width="100%"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="276"
+          width="556"
+          x="3"
+          y="3"
+        />
+      </svg>
+    </div>
+     
+    <div
+      class="dialog-inner"
+    >
+      <h2>
+        Node: Test Node
+      </h2>
+       
+      <p>
+        Test Description
+      </p>
+       
+      <button>
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+`;

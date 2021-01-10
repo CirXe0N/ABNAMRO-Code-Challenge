@@ -61,6 +61,7 @@ nav {
     font-weight: 300;
     font-style: italic;
     text-transform: uppercase;
+    text-align: right;
   }
 }
 </style>
