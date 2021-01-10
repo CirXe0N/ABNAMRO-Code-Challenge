@@ -46,10 +46,6 @@ The assignment description can be found [here](#assignment-description).
     ```commandline
     $ npm install
     ```
-1. Run the following command in the folder `backend` to build the project:
-    ```commandline
-    $ npm build
-    ```
 1. Run the following command in the folder `backend` to migrate the initial data to Neo4J database:
     ```commandline
     $ npm run migrate
